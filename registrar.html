@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="./css/styles1.css">
+        <link rel="stylesheet" href="./css/resolucionregistro.css">
+    <link rel="stylesheet" href="./CSS/flowbite.min.css">
+    <script src="./js/browser@4.js"></script>
+</head>
+<body class="flex flex-col min-h-screen overflow-x-hidden">
+    <nav class="bg-orange-500 border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+            <a href="./index.html" class="flex items-center space-x-3">
+                <img src="./img/logo.png" class="logoo ml-25 h-16 w-auto" alt="Logo" >
+            </a>
+            <div class="flex items-center md:order-2">
+                <div class="">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"></svg>
+                    </div>
+                    <div class="mr-20 items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                        <ul class="flex flex-col p-4 mt-4 font-medium rounded-lg bg-orange-500 md:flex-row md:space-x-8 md:mt-0 md:bg-transparent">
+                            <li>
+                                <a href="./index.html" class="letra block py-2 px-3 text-white hover:bg-orange-600 rounded md:hover:bg-transparent md:hover:text-white">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#" class="letra block py-2 px-3 text-white hover:bg-orange-600 rounded md:hover:bg-transparent md:hover:text-white">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="./registrar.html" class="letra block py-2 px-3 text-white hover:bg-orange-600 rounded md:hover:bg-transparent md:hover:text-white">Registrarse</a>
+                            </li>
+                            <li>
+                                <a href="./login.html" class="letra block py-2 px-3 text-white hover:bg-orange-600 rounded md:hover:bg-transparent md:hover:text-white">Inicar Sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<main class="flex-grow px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="cont">
+        <h1 class="letra title">REGISTRARSE</h1>
+    </div>
+    <form class="letra max-w-3xl mx-auto text-sm sm:text-base md:text-lg">
+        <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_first_name" id="floating_first_name" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+                <label for="floating_first_name" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Nombre</label>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_last_name" id="floating_last_name" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+                <label for="floating_last_name" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Apellido</label>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+                <label for="floating_phone" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Teléfono (123-456-7890)</label>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_document" id="floating_document" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+                <label for="floating_document"class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Documento</label>
+            </div>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="email" name="floating_email" id="floating_email" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+            <label for="floating_email" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Correo</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="password" name="floating_password" id="floating_password" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+            <label for="floating_password" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Contraseña</label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="password" name="repeat_password" id="floating_repeat_password" class="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm sm:text-base text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500" placeholder=" " required />
+            <label for="floating_repeat_password" class="absolute text-sm sm:text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Confirmar Contraseña</label>
+        </div>
+        <a href="./login.html">
+            <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-white text-sm sm:text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 w-full">Enviar</button>
+        </a>
+        
+    </form>
+</main>
+
+<footer class="colorfoot bg-white rounded-lg shadow-sm dark:bg-gray-800 mt-10">
+        <div class="w-full max-w-screen-xl mx-auto p-4 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+            <span class="letra text-sm text-gray-500 text-center dark:text-gray-400">
+                © 2025 <a href="./index.html" class="letra hover:underline">Ztep</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap justify-center items-center text-sm font-medium text-gray-500 dark:text-gray-400">
+                <li><a href="#" class="letra hover:underline me-4 md:me-6">Nosotros</a></li>
+                <li><a href="#" class="letra hover:underline me-4 md:me-6">Política Pagada</a></li>
+                <li><a href="#" class="letra hover:underline me-4 md:me-6">Licencias</a></li>
+                <li><a href="./contacto.html" class="letra hover:underline">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+</body
