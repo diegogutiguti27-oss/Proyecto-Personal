@@ -1,0 +1,5 @@
+        .bg-ztep-azul { background-color: #202738 !important; }
+        .bg-ztep-rojo { background-color: #e11d48 !important; }
+        .text-ztep-rojo { color: #e11d48 !important; }
+        .logo-transparente { mix-blend-mode: multiply; filter: contrast(115%); }
+        .letra { font-family: 'Inter', sans-serif; }

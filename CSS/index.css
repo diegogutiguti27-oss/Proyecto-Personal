@@ -1,0 +1,9 @@
+.bg-ztep-azul { background-color: #202738 !important; }
+.bg-ztep-rojo { background-color: #e11d48 !important; }
+.text-ztep-rojo { color: #e11d48 !important; }
+.letra { font-family: 'Inter', sans-serif; }
+
+/* Degradado de fondo coherente con la marca */
+.bg-gradient-ztep {
+    background: radial-gradient(circle at center, #2d3748 0%, #202738 100%);
+}

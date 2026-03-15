@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTEP - Tienda Oficial de Calzado</title>
+    <link rel="stylesheet" href="../css/menuprin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+    </style>
+</head>
+<body class="letra bg-gray-100 overflow-x-hidden">
+
+    <nav class="bg-ztep-azul fixed w-full z-50 top-0 border-b border-gray-800">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+            
+            <a href="#" class="flex items-center">
+                <img src="../img/logo.png" class="h-10 md:h-12 w-auto logo-transparente" alt="Ztep Logo">
+                <span class="ml-3 text-xl md:text-2xl font-bold text-white tracking-tight"></span>
+            </a>
+
+            <div class="flex md:hidden flex-1 mx-4">
+                <div class="relative w-full">
+                    <input type="text" class="w-full bg-gray-800 border-none text-white text-xs rounded-full py-2 px-4 focus:ring-1 focus:ring-ztep-rojo" placeholder="Buscar zapatos...">
+                </div>
+            </div>
+
+            <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" data-drawer-placement="right" type="button" class="inline-flex items-center p-2 text-white md:hidden hover:bg-gray-800 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:flex md:items-center md:w-auto md:order-1">
+                <div class="relative mr-6">
+                    <input type="text" class="bg-gray-800 border-none text-white text-sm rounded-full py-1.5 px-4 w-64 focus:ring-2 focus:ring-ztep-rojo" placeholder="¿Qué buscas hoy?">
+                </div>
+                <ul class="flex space-x-8 font-medium">
+                    <li><a href="#" class="text-ztep-rojo transition-all">Inicio</a></li>
+                    <li><a href="./registrar.html" class="text-white hover:text-ztep-rojo transition-all">Registrarse</a></li>
+                    <li><a href="./login.html" class="text-white hover:text-ztep-rojo transition-all">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="drawer-navigation" class="fixed top-0 right-0 z-[60] h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-ztep-azul w-64 border-l border-gray-800" tabindex="-1">
+        <h5 class="text-base font-semibold text-gray-400 uppercase">Menú Principal</h5>
+        <button type="button" data-drawer-hide="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-700 hover:text-white rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center">
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/></svg>
+        </button>
+        <div class="py-6">
+            <ul class="space-y-4 font-medium">
+                <li><a href="#" class="flex items-center p-3 text-white rounded-lg bg-ztep-rojo">Inicio</a></li>
+                <li><a href="./registrar.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-800 border border-transparent hover:border-gray-700">Registrarse</a></li>
+                <li><a href="./login.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-800 border border-transparent hover:border-gray-700">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="h-20 md:h-24"></div>
+
+    <div class="max-w-screen-xl mx-auto px-4 mt-4">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <div class="relative h-64 sm:h-80 md:h-[500px] overflow-hidden rounded-3xl shadow-2xl border border-gray-200">
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop" class="absolute block w-full h-full object-cover" alt="Sport 1">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-8 md:p-16">
+                        <div class="text-white">
+                            <span class="bg-ztep-rojo text-xs font-bold px-3 py-1 rounded-full uppercase">Nuevo Ingreso</span>
+                            <h2 class="text-3xl md:text-6xl font-black italic mt-2 tracking-tighter uppercase">VELOCITY ELITE</h2>
+                            <p class="text-gray-300 md:text-xl mt-2 max-w-md">Diseñados para romper récords. Comodidad y tracción extrema.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1974&auto=format&fit=crop" class="absolute block w-full h-full object-cover" alt="Urban 2">
+                </div>
+            </div>
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-ztep-rojo transition-all">
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-ztep-rojo transition-all">
+                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <main class="max-w-screen-xl mx-auto px-4 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl md:text-3xl font-black text-gray-800 border-l-8 border-ztep-rojo pl-4 uppercase italic">Tendencias</h2>
+        </div>
+    
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-10">
+            <div class="bg-white rounded-2xl md:rounded-[2rem] shadow-md md:shadow-xl border border-gray-100 overflow-hidden group hover:shadow-2xl transition-soft">
+                <div class="h-40 md:h-72 bg-gray-50 flex items-center justify-center p-4 md:p-10 relative">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=500" class="max-h-full object-contain group-hover:scale-105 transition-soft" alt="Zapato">
+                </div>
+                <div class="p-3 md:p-8">
+                    <h3 class="text-sm md:text-2xl font-bold text-gray-900 truncate">Sky Walk Pro</h3>
+                    <div class="mt-1 md:mt-4">
+                        <span class="text-lg md:text-3xl font-black text-ztep-rojo">$150.000</span>
+                    </div>
+                    <button class="w-full mt-3 md:mt-8 bg-ztep-azul text-white text-[10px] md:text-base font-bold py-2 md:py-4 rounded-xl hover:bg-ztep-rojo transition-soft">
+                        COMPRAR
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl md:rounded-[2rem] shadow-md md:shadow-xl border border-gray-100 overflow-hidden group hover:shadow-2xl transition-soft">
+                <div class="h-40 md:h-72 bg-gray-50 flex items-center justify-center p-4 md:p-10 relative">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=500" class="max-h-full object-contain group-hover:scale-105 transition-soft" alt="Zapato">
+                </div>
+                <div class="p-3 md:p-8">
+                    <h3 class="text-sm md:text-2xl font-bold text-gray-900 truncate">Urban Style</h3>
+                    <div class="mt-1 md:mt-4">
+                        <span class="text-lg md:text-3xl font-black text-ztep-rojo">$120.000</span>
+                    </div>
+                    <button class="w-full mt-3 md:mt-8 bg-ztep-azul text-white text-[10px] md:text-base font-bold py-2 md:py-4 rounded-xl hover:bg-ztep-rojo transition-soft">
+                        COMPRAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-ztep-azul text-white pt-16 pb-8">
+        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="md:col-span-2">
+                <h4 class="text-3xl font-black italic border-b-4 border-ztep-rojo inline-block mb-6">ZTEP</h4>
+                <p class="text-gray-400 text-base max-w-sm mx-auto md:mx-0 leading-relaxed">
+                    Somos líderes en el mercado de calzado. Nuestra misión es brindarte calidad y diseño exclusivo en cada par que elijas.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-widest">Información</h4>
+                <ul class="text-gray-400 space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-ztep-rojo transition-all">Envíos y Devoluciones</a></li>
+                    <li><a href="#" class="hover:text-ztep-rojo transition-all">Guía de Tallas</a></li>
+                    <li><a href="#" class="hover:text-ztep-rojo transition-all">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-widest">Contacto</h4>
+                <p class="text-gray-400 text-sm">Villavicencio, Meta</p>
+                <p class="text-gray-400 text-sm mt-2">WhatsApp: +57 300 000 0000</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-ztep-rojo cursor-pointer transition-all">IG</div>
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-ztep-rojo cursor-pointer transition-all">FB</div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-[10px] uppercase tracking-[0.2em]">
+            <p>© 2026 ZTEP. Diseñado para impactar.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

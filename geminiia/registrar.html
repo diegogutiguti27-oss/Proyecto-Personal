@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTEP - Crear Cuenta</title>
+    <link rel="stylesheet" href="../css/regis.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="letra bg-gray-50 flex flex-col min-h-screen overflow-x-hidden">
+
+    <nav class="bg-ztep-azul fixed w-full z-50 top-0 border-b border-gray-800">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+            
+            <a href="../geminiia/menuprin.html" class="flex items-center">
+                <img src="../img/logo.png" class="h-10 md:h-12 w-auto logo-transparente" alt="Ztep Logo">
+                <span class="ml-3 text-2xl font-black text-white italic"></span>
+            </a>
+            <button data-drawer-target="sidebar-reg" data-drawer-show="sidebar-reg" data-drawer-placement="right" type="button" class="inline-flex items-center p-2 text-white md:hidden hover:bg-gray-800 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:flex md:items-center md:w-auto">
+                <ul class="flex space-x-8 font-bold uppercase text-xs tracking-widest">
+                    <li><a href="#" class="text-white hover:text-ztep-rojo transition-all">Inicio</a></li>
+                    <li><a href="./login.html" class="text-white hover:text-ztep-rojo transition-all">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="sidebar-reg" class="fixed top-0 right-0 z-[60] h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-ztep-azul w-64 border-l border-gray-800" tabindex="-1">
+        <div class="flex items-center justify-between mb-8">
+            <h5 class="text-white font-black italic">MENÚ</h5>
+            <button type="button" data-drawer-hide="sidebar-reg" class="text-gray-400 hover:text-white">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/></svg>
+            </button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="./index.html" class="block p-4 text-white font-bold rounded-xl border border-gray-700">Inicio</a></li>
+            <li><a href="./login.html" class="block p-4 text-white font-bold rounded-xl bg-ztep-rojo">Login</a></li>
+        </ul>
+    </div>
+
+    <main class="flex-grow flex items-center justify-center px-4 pt-32 pb-16">
+        <div class="w-full max-w-md bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 p-8 md:p-12">
+            
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-black text-gray-900 italic uppercase leading-tight">Únete a <span class="text-ztep-rojo">ZTEP</span></h1>
+                <p class="text-gray-500 text-sm mt-2">Crea tu cuenta y camina con estilo</p>
+            </div>
+
+            <button type="button" class="w-full flex items-center justify-center gap-3 bg-white border-2 border-gray-100 py-3.5 rounded-2xl text-gray-700 font-bold hover:bg-gray-50 hover:border-gray-200 transition-all mb-6 group">
+                <img class="w-5 h-5 group-hover:scale-110 transition-all" src="../img/Google-color.svg" alt="Google">
+                <span>Continuar con Google</span>
+            </button>
+
+            <div class="flex items-center my-6">
+                <div class="flex-grow border-t border-gray-100"></div>
+                <span class="px-3 text-gray-400 text-[10px] uppercase font-black tracking-widest">O usa tu correo</span>
+                <div class="flex-grow border-t border-gray-100"></div>
+            </div>
+
+            <form action="#">
+                <div class="space-y-5">
+                    <div class="relative">
+                        <input type="text" id="name" class="block w-full px-4 py-4 text-gray-900 bg-gray-50 rounded-2xl border-2 border-gray-100 appearance-none focus:outline-none focus:border-ztep-rojo focus:ring-0 peer transition-all" placeholder=" " required />
+                        <label for="name" class="absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-ztep-rojo peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 pointer-events-none">Nombres</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" id="name" class="block w-full px-4 py-4 text-gray-900 bg-gray-50 rounded-2xl border-2 border-gray-100 appearance-none focus:outline-none focus:border-ztep-rojo focus:ring-0 peer transition-all" placeholder=" " required />
+                        <label for="name" class="absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-ztep-rojo peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 pointer-events-none">Apellidos</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="email" id="email" class="block w-full px-4 py-4 text-gray-900 bg-gray-50 rounded-2xl border-2 border-gray-100 appearance-none focus:outline-none focus:border-ztep-rojo focus:ring-0 peer transition-all" placeholder=" " required />
+                        <label for="email" class="absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-ztep-rojo peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 pointer-events-none">Correo Electrónico</label>
+                    </div>
+
+                    <div class="relative">
+                        <input type="password" id="pass" class="block w-full px-4 py-4 text-gray-900 bg-gray-50 rounded-2xl border-2 border-gray-100 appearance-none focus:outline-none focus:border-ztep-rojo focus:ring-0 peer transition-all" placeholder=" " required />
+                        <label for="pass" class="absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-ztep-rojo peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 pointer-events-none">Contraseña</label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-ztep-azul text-white font-black py-4 rounded-2xl shadow-xl shadow-blue-900/20 hover:bg-ztep-rojo transform active:scale-95 transition-all uppercase tracking-widest text-sm">
+                        Crear Cuenta
+                    </button>
+                </div>
+            </form>
+
+            <p class="mt-8 text-center text-sm text-gray-500">
+                ¿Ya eres parte de la comunidad? <a href="./login.html" class="text-ztep-rojo font-bold hover:underline">Inicia Sesión</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-ztep-azul text-white py-10 border-t border-gray-800">
+        <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h4 class="text-2xl font-black italic text-white">ZTEP</h4>
+                <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em] mt-1">Premium Footwear</p>
+            </div>
+            <div class="text-gray-500 text-[10px] uppercase tracking-widest">
+                © 2026 ZTEP. Villavicencio, Meta.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

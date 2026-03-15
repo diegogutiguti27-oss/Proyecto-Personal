@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTEP - Recuperar Acceso</title>
+    <link rel="stylesheet" href="../css/recucontra.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="letra bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-ztep-azul py-4 px-4 border-b border-gray-800">
+        <div class="max-w-screen-xl mx-auto flex justify-center">
+            <a href="./index.html" class="flex items-center">
+                <img src="../img/logo.png" class="h-12 w-auto logo-transparente" alt="ZTEP">
+                <span class="ml-3 text-2xl font-black text-white italic tracking-tighter"></span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center px-4 py-16">
+        <div class="w-full max-w-md bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 text-center">
+            
+            <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-dashed border-gray-200">
+                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                </svg>
+            </div>
+
+            <h1 class="text-2xl font-black text-gray-900 uppercase italic">¿Olvidaste tu clave?</h1>
+            <p class="text-gray-500 text-sm mt-3 mb-8">No te preocupes. Ingresa tu correo y te enviaremos las instrucciones para restablecerla.</p>
+
+            <form action="#">
+                <div class="space-y-6">
+                    <div class="relative">
+                        <input type="email" id="reset_email" class="block w-full px-4 py-4 text-gray-900 bg-gray-50 rounded-2xl border-2 border-gray-100 appearance-none focus:outline-none focus:border-ztep-rojo focus:ring-0 peer transition-all" placeholder=" " required />
+                        <label for="reset_email" class="absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-focus:px-2 peer-focus:text-ztep-rojo peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-3 pointer-events-none">Tu correo electrónico</label>
+                    </div>
+
+                    <button type="submit" class="w-full bg-ztep-azul text-white font-black py-4 rounded-2xl shadow-xl shadow-blue-900/20 hover:bg-ztep-rojo transform active:scale-95 transition-all uppercase tracking-widest text-sm">
+                        Enviar enlace
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-8">
+                <a href="../geminiia/login.html" class="text-sm font-bold text-gray-400 hover:text-ztep-rojo transition-all">
+                    ← Volver al inicio de sesión
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-ztep-azul text-white py-6 border-t border-gray-800 text-center">
+        <p class="text-gray-500 text-[10px] uppercase tracking-widest">© 2026 ZTEP. Villavicencio, Meta.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
