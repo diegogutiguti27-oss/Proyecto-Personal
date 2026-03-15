@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTEP Admin - Control de Pedidos</title>
+    <link rel="stylesheet" href="../css/adminpedidos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="letra bg-gray-50 flex flex-col md:flex-row min-h-screen overflow-hidden">
+
+    <aside class="w-full md:w-64 bg-ztep-azul text-white p-6 flex flex-col z-50">
+        <div class="flex items-center mb-10 justify-center md:justify-start">
+            <img src="../img/logo.png" class="h-10 w-auto" alt="Logo">
+            <span class="ml-3 text-2xl font-black italic tracking-tighter"></span>
+        </div>
+        
+        <nav class="space-y-2 flex-grow">
+            <a href="./admin_menuprin.html" class="flex items-center p-3 bg-ztep-rojo rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Dashboard
+            </a>
+            <a href="./admin_productos.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                Productos
+            </a>
+            <a href="./admin_usuarios.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Usuarios
+            </a>
+
+            <a href="./admin_pedidos.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Pedidos
+            </a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-gray-800">
+            <a href="./index.html" class="flex items-center p-3 text-ztep-rojo font-black text-xs uppercase tracking-widest hover:bg-ztep-rojo hover:text-white rounded-xl transition-all">
+                Cerrar Sesión
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-grow p-4 md:p-10 flex flex-col h-screen overflow-hidden">
+        
+        <header class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4 flex-shrink-0">
+            <div>
+                <h1 class="text-3xl font-black text-gray-900 uppercase italic">Control de <span class="text-ztep-rojo">Pedidos</span></h1>
+                <p class="text-gray-500 text-sm mt-1">Gestiona envíos y estados de venta en tiempo real.</p>
+            </div>
+            
+            <div class="flex gap-2 w-full lg:w-auto overflow-x-auto pb-2">
+                <input type="date" class="bg-white border-none rounded-xl text-xs font-bold text-gray-500 shadow-md focus:ring-ztep-rojo">
+                <button class="bg-ztep-azul text-white px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-ztep-rojo transition-all">Filtrar</button>
+            </div>
+        </header>
+
+        <div class="bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl flex-grow overflow-hidden flex flex-col border border-gray-100">
+            <div class="overflow-x-auto flex-grow">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-50 sticky top-0 z-10">
+                        <tr class="text-gray-400 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] border-b border-gray-100">
+                            <th class="px-6 md:px-8 py-5">Orden & Cliente</th>
+                            <th class="px-6 py-5 hidden md:table-cell">Detalle Envío</th>
+                            <th class="px-6 py-5">Total</th>
+                            <th class="px-6 py-5">Estado</th>
+                            <th class="px-6 py-5 text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        
+                        <tr class="hover:bg-gray-50/80 transition-colors">
+                            <td class="px-6 md:px-8 py-5">
+                                <div class="min-w-0">
+                                    <p class="font-black text-gray-900 italic text-sm">#ZTP-2024-01</p>
+                                    <p class="text-[10px] text-gray-500 font-bold uppercase truncate">Andrés Villalba</p>
+                                </div>
+                            </td>
+                            <td class="px-6 py-5 hidden md:table-cell">
+                                <p class="text-[11px] font-bold text-gray-600 italic">Calle 15 #23-40, Villavicencio</p>
+                                <p class="text-[9px] text-gray-400 font-black uppercase">Tel: 310 555 1234</p>
+                            </td>
+                            <td class="px-6 py-5">
+                                <p class="font-black text-ztep-rojo text-sm">$350.000</p>
+                            </td>
+                            <td class="px-6 py-5">
+                                <select class="bg-orange-100 text-orange-600 text-[9px] font-black uppercase rounded-full border-none focus:ring-orange-500 py-1 px-3 appearance-none cursor-pointer">
+                                    <option value="pendiente" selected>Pendiente</option>
+                                    <option value="enviado">Enviado</option>
+                                    <option value="entregado">Entregado</option>
+                                </select>
+                            </td>
+                            <td class="px-6 py-5">
+                                <div class="flex justify-center">
+                                    <button title="Ver Detalle" class="text-gray-400 hover:text-ztep-azul transition-all">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50/80 transition-colors">
+                            <td class="px-6 md:px-8 py-5">
+                                <div>
+                                    <p class="font-black text-gray-900 italic text-sm">#ZTP-2024-02</p>
+                                    <p class="text-[10px] text-gray-500 font-bold uppercase">Marta Rodríguez</p>
+                                </div>
+                            </td>
+                            <td class="px-6 py-5 hidden md:table-cell">
+                                <p class="text-[11px] font-bold text-gray-600 italic">Av. Principal #10-10, Bogotá</p>
+                            </td>
+                            <td class="px-6 py-5">
+                                <p class="font-black text-ztep-rojo text-sm">$150.000</p>
+                            </td>
+                            <td class="px-6 py-5">
+                                <select class="bg-blue-100 text-blue-600 text-[9px] font-black uppercase rounded-full border-none py-1 px-3 appearance-none cursor-pointer">
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="enviado" selected>Enviado</option>
+                                    <option value="entregado">Entregado</option>
+                                </select>
+                            </td>
+                            <td class="px-6 py-5 text-center">
+                                <button class="text-gray-400 hover:text-ztep-azul transition-all">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="p-6 bg-gray-50 border-t border-gray-100 flex justify-between items-center">
+                <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Página 1 de 5</span>
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 bg-white border border-gray-200 rounded-xl text-[10px] font-black uppercase hover:bg-gray-100 transition-all">Anterior</button>
+                    <button class="px-4 py-2 bg-ztep-azul text-white rounded-xl text-[10px] font-black uppercase hover:bg-ztep-rojo transition-all">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

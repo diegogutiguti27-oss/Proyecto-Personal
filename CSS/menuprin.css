@@ -1,0 +1,18 @@
+        /* CONFIGURACIÓN DE COLORES ZTEP (Sin :root como pediste) */
+        .bg-ztep-azul { background-color: #202738 !important; }
+        .bg-ztep-rojo { background-color: #e11d48 !important; }
+        .text-ztep-rojo { color: #e11d48 !important; }
+        .border-ztep-rojo { border-color: #e11d48 !important; }
+
+        /* TRUCO PARA EL LOGO: Elimina el fondo blanco de la imagen */
+        .logo-transparente {
+            mix-blend-mode: multiply;
+            filter: contrast(110%);
+        }
+
+        .letra {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+        }
+
+        /* Suavizar transiciones */
+        .transition-all { transition: all 0.3s ease; }

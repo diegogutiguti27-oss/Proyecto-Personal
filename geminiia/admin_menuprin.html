@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTEP Admin - Dashboard</title>
+    <link rel="stylesheet" href="../css/adminprincipal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="letra bg-gray-50 flex flex-col md:flex-row min-h-screen">
+
+    <aside class="w-full md:w-64 bg-ztep-azul text-white p-6 flex flex-col z-50">
+        <div class="flex items-center mb-10 justify-center md:justify-start">
+            <img src="../img/logo.png" class="h-10 w-auto" alt="Logo">
+            <span class="ml-3 text-2xl font-black italic tracking-tighter"></span>
+        </div>
+        
+        <nav class="space-y-2 flex-grow">
+            <a href="./admin_menuprin.html" class="flex items-center p-3 bg-ztep-rojo rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Dashboard
+            </a>
+            <a href="./admin_productos.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                Productos
+            </a>
+            <a href="./admin_usuarios.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Usuarios
+            </a>
+            <a href="./admin_pedidos.html" class="flex items-center p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all">
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                Pedidos
+            </a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-gray-800">
+            <a href="./index.html" class="flex items-center p-3 text-ztep-rojo font-black text-xs uppercase tracking-widest hover:bg-ztep-rojo hover:text-white rounded-xl transition-all">
+                Cerrar Sesión
+            </a>
+        </div>
+    </aside>
+
+    <main class="flex-grow p-6 md:p-10 overflow-y-auto">
+        
+        <header class="mb-10">
+            <h1 class="text-3xl font-black text-gray-900 uppercase italic">Panel de <span class="text-ztep-rojo">Control</span></h1>
+            <p class="text-gray-500 font-medium">Bienvenido de nuevo, Administrador.</p>
+        </header>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-[2rem] shadow-xl border-b-4 border-ztep-rojo">
+                <p class="text-gray-400 text-xs font-black uppercase tracking-widest mb-2">Ventas del Mes</p>
+                <h3 class="text-2xl font-black text-gray-900">$4.250.000</h3>
+                <span class="text-green-500 text-xs font-bold">+12.5% vs mes anterior</span>
+            </div>
+            <div class="bg-white p-6 rounded-[2rem] shadow-xl border-b-4 border-ztep-azul">
+                <p class="text-gray-400 text-xs font-black uppercase tracking-widest mb-2">Pedidos Pendientes</p>
+                <h3 class="text-2xl font-black text-gray-900">18</h3>
+                <span class="text-ztep-rojo text-xs font-bold">Requieren atención</span>
+            </div>
+            <div class="bg-white p-6 rounded-[2rem] shadow-xl border-b-4 border-gray-200">
+                <p class="text-gray-400 text-xs font-black uppercase tracking-widest mb-2">Clientes Nuevos</p>
+                <h3 class="text-2xl font-black text-gray-900">124</h3>
+                <span class="text-gray-400 text-xs font-bold">Registrados esta semana</span>
+            </div>
+            <div class="bg-white p-6 rounded-[2rem] shadow-xl border-b-4 border-orange-400">
+                <p class="text-gray-400 text-xs font-black uppercase tracking-widest mb-2">Stock Crítico</p>
+                <h3 class="text-2xl font-black text-gray-900">5</h3>
+                <span class="text-orange-500 text-xs font-bold">Modelos por agotarse</span>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 bg-white rounded-[2.5rem] shadow-2xl p-8 overflow-hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-black uppercase italic">Ventas <span class="text-ztep-rojo">Recientes</span></h2>
+                    <a href="#" class="text-xs font-bold text-gray-400 hover:text-ztep-rojo uppercase">Ver Todo →</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="text-gray-400 text-[10px] uppercase tracking-[0.2em] border-b border-gray-100">
+                                <th class="pb-4">ID Orden</th>
+                                <th class="pb-4">Cliente</th>
+                                <th class="pb-4">Total</th>
+                                <th class="pb-4">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-50">
+                            <tr>
+                                <td class="py-4 font-bold text-sm">#ZTP-9921</td>
+                                <td class="py-4 text-sm">Andrés Villalba</td>
+                                <td class="py-4 font-black text-ztep-rojo">$350.000</td>
+                                <td class="py-4">
+                                    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-[10px] font-black uppercase">Enviado</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-bold text-sm">#ZTP-9922</td>
+                                <td class="py-4 text-sm">Marta Rodríguez</td>
+                                <td class="py-4 font-black text-ztep-rojo">$150.000</td>
+                                <td class="py-4">
+                                    <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-[10px] font-black uppercase">Pendiente</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1 bg-ztep-azul rounded-[2.5rem] shadow-2xl p-8 text-white">
+                <h2 class="text-xl font-black uppercase italic mb-6">Más <span class="text-ztep-rojo">Vendidos</span></h2>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center p-2">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Nike" class="max-h-full object-contain">
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold italic">Nike Air Max Red</p>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase">45 Ventas</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center p-2">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sky" class="max-h-full object-contain grayscale">
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold italic">Sky Walk Casual</p>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase">32 Ventas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

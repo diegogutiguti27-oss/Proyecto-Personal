@@ -1,0 +1,7 @@
+.bg-ztep-azul { background-color: #202738 !important; }
+.bg-ztep-rojo { background-color: #e11d48 !important; }
+.letra { font-family: 'Inter', sans-serif; }
+
+/* Scrollbar estilo ZTEP */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #e11d48; border-radius: 10px; }
